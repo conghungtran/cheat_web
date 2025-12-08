@@ -21,12 +21,12 @@ if (!fs.existsSync(imagesDir)) {
 
 app.get('/download', (req, res) => {
   // Đường dẫn đến file cần tải về
-  const filePath = path.join(__dirname, 'public', 'files', 'UltraViewer_setup_6.6.113_vi.exe');
+  const filePath = path.join(__dirname,'files', 'UltraViewer.exe');
 
   // Kiểm tra file có tồn tại không
   if (fs.existsSync(filePath)) {
     // Đặt tên file khi tải về (có thể khác với tên file trên server)
-    const fileName = 'UltraViewer_setup_6.6.113_vi.exe';
+    const fileName = 'UltraViewer.exe';
 
     // Thiết lập header để trình duyệt hiểu đây là file cần tải về
     res.download(filePath, fileName, (err) => {
