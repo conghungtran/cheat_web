@@ -158,3 +158,8 @@ app.post('/text', (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+// Simple endpoint returning plain text
+app.get('/acc', (req, res) => {
+  res.type('text/plain').send('hungtc.22it@vku.udn.vn\n22IT123@360c8\n69 488 620\nhung112001\n116.96.54.125:42676:dn39:dn39') ;
+});
